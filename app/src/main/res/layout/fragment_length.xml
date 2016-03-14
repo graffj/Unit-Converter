@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context=".LengthFragment">
+
+    <EditText
+        android:id="@+id/editFromLength"
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:textSize="25sp"
+        android:inputType="numberSigned|numberDecimal"/>
+
+    <Spinner
+        android:id="@+id/from_length_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/editFromLength"
+        android:layout_toEndOf="@+id/editFromLength"
+        android:layout_alignBottom="@+id/editFromLength"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/convertLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:gravity="start|center_vertical"
+        android:text="@string/convert_label"
+        android:layout_below="@+id/editFromLength"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="21dp" />
+
+    <TextView
+        android:id="@+id/editToLength"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:textSize="25sp"
+        android:layout_below="@+id/convertLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <Spinner
+        android:id="@+id/to_length_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editToLength"
+        android:layout_toRightOf="@+id/editToLength"
+        android:layout_toEndOf="@+id/editToLength"
+        android:layout_alignTop="@+id/editToLength" />
+
+</RelativeLayout>

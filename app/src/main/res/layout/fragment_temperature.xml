@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context=".TemperatureFragment">
+
+    <EditText
+        android:id="@+id/editFromTemp"
+        android:layout_width="120dp"
+        android:layout_height="90dp"
+        android:textSize="25sp"
+        android:inputType="numberSigned|numberDecimal"/>
+
+    <RadioGroup
+        android:id="@+id/tempFromRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/editFromTemp">
+
+        <RadioButton
+            android:id="@+id/fromTempRadio0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/temp_label_Celsius"/>
+
+        <RadioButton
+            android:id="@+id/fromTempRadio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/temp_label_Fahrenheit"
+            android:onClick="onRadioFromClick"/>
+
+        <RadioButton
+            android:id="@+id/fromTempRadio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/temp_label_Kelvin"
+            android:onClick="onRadioFromClick"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/convertLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:gravity="start|center_vertical"
+        android:text="@string/convert_label"
+        android:layout_below="@+id/editFromTemp"
+        />
+
+    <TextView
+        android:id="@+id/displayToTemp"
+        android:layout_width="120dp"
+        android:layout_height="90dp"
+        android:textSize="25sp"
+        android:layout_below="@+id/convertLabel"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/displayToTemp"
+        android:layout_toRightOf="@+id/displayToTemp"
+        android:layout_toEndOf="@+id/displayToTemp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/temp_label_Celsius"
+            android:id="@+id/toTempRadio0"
+            android:checked="true"
+            android:onClick="onRadioToClick"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/temp_label_Fahrenheit"
+            android:id="@+id/toTempRadio1"
+            android:onClick="onRadioToClick"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/temp_label_Kelvin"
+            android:id="@+id/toTempRadio2"
+            android:onClick="onRadioToClick"/>
+    </RadioGroup>
+
+
+</RelativeLayout>
